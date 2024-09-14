@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="19sp"
+    android:isScrollContainer="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ResgistrationActivity"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="410sp"
+            android:layout_height="180dp"
+            android:src="@drawable/bookslogo"
+            android:layout_marginTop="10sp"
+            android:layout_margin="20sp"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvregistrationhere"
+                android:text="Register Here"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:layout_marginTop="3sp"
+                android:layout_margin="5sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etRegisterName"
+                android:hint="Name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_margin="10sp"
+                android:paddingLeft="16sp"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etRegisterMobileN0"
+                android:hint="Mobile Number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textColorHint="@color/black"
+                android:paddingLeft="16sp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_margin="10sp"
+                android:textSize="20sp"
+                android:inputType="number"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etRegisterEmailId"
+                android:hint="Email Id"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingLeft="10sp"
+                android:textSize="20sp"
+                android:textColorHint="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_margin="16sp"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etRegisterUsername"
+                android:hint="User Name"
+                android:paddingLeft="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColorHint="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_margin="10sp"
+                android:inputType="text"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etRegisterPassword"
+                android:hint="Password"
+                android:paddingLeft="16sp"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_margin="10sp"
+                android:textSize="20sp"
+                android:inputType="textPassword" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="190sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etRegisterRegister"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_margin="10sp"
+                android:background="@color/green"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

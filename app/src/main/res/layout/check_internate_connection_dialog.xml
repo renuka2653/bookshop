@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/signal_wifi_off" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Opps!"
+        android:textColor="@color/red"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internate Connection "
+        android:textColor="@color/red"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginTop="10sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Check Your Connection "
+        android:textColor="@color/red"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginTop="10sp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btncheckinternateconnection"
+        android:text="RETRY"
+        android:background="@drawable/button_bg_shape"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="25sp"/>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/homeMenuMyOffers"
+        android:title="My Offers"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/homeMenuMyCard"
+        android:title="My Card"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/homeMenuMyProfile"
+        android:title="My Profile"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/homeMenulogout"
+        android:title="Logout"
+        android:icon="@drawable/icon_logout"
+        app:showAsAction="always"/>
+
+</menu>
