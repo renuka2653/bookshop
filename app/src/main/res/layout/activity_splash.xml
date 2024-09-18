@@ -16,4 +16,11 @@
        android:src="@drawable/bookslogo"
        android:layout_centerInParent="true"
        />
+   <ImageView
+       android:layout_width="250dp"
+       android:layout_height="250dp"
+       android:id="@+id/ivsplashlogo1"
+       android:src="@drawable/bookslogo"
+       android:layout_centerInParent="true"
+       />
 </RelativeLayout>
