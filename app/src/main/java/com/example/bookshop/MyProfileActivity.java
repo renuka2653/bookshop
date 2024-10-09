@@ -39,7 +39,7 @@ import cz.msebera.android.httpclient.Header;
 public class MyProfileActivity extends AppCompatActivity {
     ImageView ivProfilePhoto;
 TextView tvmyname,tvMobileNo,tvEmail,tvUserName;
-AppCompatButton btnEditProfile,btnSignOut;
+AppCompatButton btnEditProfile,btnUpdateProfie,btnSignOut;
 GoogleSignInOptions googleSignInOptions;
 GoogleSignInClient googleSignInClient;
 SharedPreferences preferences;
@@ -61,6 +61,8 @@ ProgressDialog progressDialog;
         tvUserName=findViewById(R.id.tvMyProfileUserName);
         btnSignOut = findViewById (R.id.btnMyProfileSignOut);
         btnEditProfile=findViewById(R.id.btnMyprofileEditProfile);
+        btnUpdateProfie=findViewById(R.id.btnMyProfileUpdate);
+
 
         googleSignInOptions= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail().build();
@@ -74,6 +76,7 @@ ProgressDialog progressDialog;
             String email = googleSignInAccount.getEmail();
             tvmyname.setText(name);
             tvEmail.setText(email);
+
 
             btnSignOut.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -138,6 +141,20 @@ ProgressDialog progressDialog;
                                         .skipMemoryCache(true)
                                         .error(R.drawable.imagenotfound)
                                         .into(ivProfilePhoto);
+
+                                btnUpdateProfie.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Intent intent=new Intent(MyProfileActivity.this,
+                                                UpdateProfileActivity.class);
+                                        intent.putExtra("name",strname);
+                                        intent.putExtra("mobileno",strmobileno);
+                                        intent.putExtra("email",stremail);
+                                        intent.putExtra("Username",strusername);
+
+                                        startActivity(intent);
+                                    }
+                                });
                             }
 
 

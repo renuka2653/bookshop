@@ -24,6 +24,8 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import com.example.bookshop.Comman.NetworkChangeLister;
 import com.example.bookshop.Comman.Urls;
+import com.example.bookshop.admin.AdminHomeActivity;
+import com.example.bookshop.shopapp.Shop_Login_Activity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -41,7 +43,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class LoginActivity extends AppCompatActivity {
 ImageView ivLoginLogo;
-TextView  tvLogintitle, tvForgetPassword,tvLogintitle1;
+TextView  tvLogintitle, tvForgetPassword,tvLogintitle1,tvShopApp;
 EditText  etLoginUser,etLoginPass;
 Button btnLogin;
 CheckBox checkBox;
@@ -72,6 +74,15 @@ SharedPreferences.Editor editor;
       checkBox=findViewById(R.id.cbshowhidePassword);
       btnSigninGoogle=findViewById(R.id.btnLoginSingWithGoogle);
       tvForgetPassword = findViewById(R.id.tvLoginForgetPassword);
+      tvShopApp=findViewById(R.id.tvLoginShopapp);
+
+      tvShopApp.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              Intent intent=new Intent(LoginActivity.this, Shop_Login_Activity.class);
+              startActivity(intent);
+          }
+      });
 
 
      googleSignInOptions =new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).
@@ -202,14 +213,21 @@ SharedPreferences.Editor editor;
                         progressDialog.dismiss();
                         try {
                             String status = response.getString("success");
-                            if(status.equals("1"))
+                            String strUserrole = response.getString("userrole");
+                            if(status.equals("1") && strUserrole.equals("user"))
                             {
                                 Intent intent=new Intent(LoginActivity.this, HomeActivity.class);
                               editor.putString("Username",etLoginUser.getText().toString()).commit();
                                 startActivity(intent);
-                                finish();
+
                             }
-                            else {
+                            else if (status.equals("1") && strUserrole.equals("admin"))
+                            {
+
+                                Intent intent=new Intent(LoginActivity.this,AdminHomeActivity.class);
+                                startActivity(intent);
+
+                            } else {
                                 Toast.makeText(LoginActivity.this,"Invalil User Name and Password",
                                         Toast.LENGTH_SHORT).show();
                             }

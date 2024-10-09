@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MyProfileActivity"
+    android:layout_margin="20sp">
+
+<LinearLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_margin="20sp"
     android:orientation="vertical">
 
@@ -16,6 +22,13 @@
         android:src="@drawable/icon_person"
         android:layout_gravity="center_horizontal"
         />
+   <ImageView
+       android:layout_width="50sp"
+       android:layout_height="50sp"
+       android:id="@+id/iv"/>
+
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="250dp"
@@ -34,39 +47,42 @@
   <TextView
         android:id="@+id/tvMyProfileName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="15sp"
         android:text="Name"
         android:background="@drawable/tv_bg_shape"
         android:textSize="16sp"
+        android:layout_margin="16dp"
         android:paddingLeft="16sp"
-        android:textColor="@color/green"
+        android:textColor="@color/black"
       android:gravity="center_vertical"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvMyProfileMobileNo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="15sp"
         android:text="Mobile No"
         android:background="@drawable/tv_bg_shape"
         android:textSize="16sp"
         android:paddingLeft="16sp"
-        android:textColor="@color/green"
+        android:layout_margin="16dp"
+        android:textColor="@color/black"
         android:gravity="center_vertical"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvMyProfileEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="15sp"
         android:text="Email Id"
         android:background="@drawable/tv_bg_shape"
         android:textSize="16sp"
         android:paddingLeft="16sp"
-        android:textColor="@color/green"
+        android:textColor="@color/black"
+        android:layout_margin="16dp"
         android:gravity="center_vertical"
         android:textStyle="bold" />
 
@@ -74,16 +90,28 @@
     <TextView
         android:id="@+id/tvMyProfileUserName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="15sp"
         android:text="UserName"
         android:background="@drawable/tv_bg_shape"
         android:textSize="16sp"
         android:paddingLeft="16sp"
-        android:textColor="@color/green"
+        android:textColor="@color/black"
         android:gravity="center_vertical"
+        android:layout_margin="16dp"
         android:textStyle="bold" />
 
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMyProfileUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:background="@color/green"
+        android:text="UPDATE PROFILE"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnMyProfileSignOut"
@@ -91,9 +119,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="16sp"
         android:background="@color/green"
-        android:text="Sign Out"
+        android:text="SignOut"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
 
 </LinearLayout>
+</ScrollView>

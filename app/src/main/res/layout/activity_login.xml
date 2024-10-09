@@ -114,6 +114,18 @@
             android:layout_margin="10sp"
             android:background="@drawable/common_google_signin_btn_text_dark_focused"
 />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLoginShopapp"
+            android:text="Login as Shop"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="6sp"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            />
 
     </LinearLayout>
 </RelativeLayout>
